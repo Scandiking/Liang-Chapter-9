@@ -1,4 +1,8 @@
-public class Circle {
+/*
+Named "Circlee" not to come in conflict with "TestCircle" who is using the Circle class.
+ */
+
+public class Circlee {
     // Main method
     public static void main(String[] args) {
         // Create a circle with radius 1
@@ -11,7 +15,7 @@ public class Circle {
 
         // Create a new cirlce with radius 125
         Circle circle3 = new Circle(125);
-        System.out.println("The area of the circle of radius " + circle3.radius + " is " circle3.getArea());
+        System.out.println("The area of the circle of radius " + circle3.radius + " is " + circle3.getArea());
 
         // Modify circle radius
         circle2.radius = 100;
@@ -21,15 +25,26 @@ public class Circle {
     double radius;
 
     // Construct a circle with radius 1
-    Circle() {
+    Circlee() {
         radius = 1;
     }
 
-    Circle(double newRadius) {
+    Circlee(double newRadius) {
         radius = newRadius;
     }
 
+    // Return the area of the circle
     double getArea() {
         return radius * radius * Math.PI;
+    }
+
+    // Return the perimeter of the circle
+    double getPerimeter() {
+        return 2 * radius * Math.PI;
+    }
+
+    // Set a new radius for the circle
+    void setRadius(double newRadius) {
+        radius = newRadius;
     }
 }
